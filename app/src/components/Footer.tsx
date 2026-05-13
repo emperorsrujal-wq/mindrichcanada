@@ -21,7 +21,7 @@ export function Footer() {
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
             className="transition-opacity duration-200 hover:opacity-80"
           >
-            <img src="/logo.png" alt="MINDRICH CANADA INC" className="h-[36px] w-auto" />
+            <img src="/logo.png" alt="MINDRICH CANADA INC" className="h-[48px] w-auto" />
           </a>
           <div className="flex flex-wrap items-center gap-6">
             {links.map((l) => (

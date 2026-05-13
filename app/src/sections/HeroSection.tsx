@@ -25,7 +25,7 @@ export function HeroSection() {
           src="/logo.png"
           alt="MINDRICH CANADA INC"
           className="hero-anim mx-auto mb-8"
-          style={{ height: 'clamp(60px, 10vw, 100px)', width: 'auto', filter: 'brightness(1.1)' }}
+          style={{ height: 'clamp(90px, 14vw, 150px)', width: 'auto', filter: 'brightness(1.1)' }}
         />
         <h1
           className="hero-anim font-inter font-semibold"
