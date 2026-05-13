@@ -9,17 +9,17 @@ const services = [
   {
     num: '01',
     title: 'IT Consulting',
-    desc: 'Strategic technology guidance to align your IT investments with business goals. We help you navigate digital transformation with clarity and confidence.',
+    desc: 'Strategic technology guidance to align your IT investments with business goals. Our Toronto-based IT consulting company helps you navigate digital transformation with clarity and confidence.',
   },
   {
     num: '02',
     title: 'Software Development',
-    desc: 'Custom web and mobile applications built with modern technologies. From concept to deployment, we craft solutions that drive real results.',
+    desc: 'Custom web and mobile applications built with modern technologies. As a premier software company, we craft scalable solutions from concept to deployment that drive real results.',
   },
   {
     num: '03',
     title: 'IT Staffing',
-    desc: 'Reliable talent placement for your technology needs. We connect you with skilled professionals who fit your culture.',
+    desc: 'Reliable talent placement for your technology needs. As a top staffing company in Canada, we connect you with skilled tech professionals who fit your culture and accelerate your goals.',
   },
 ]
 
@@ -45,7 +45,7 @@ export function ServicesSection() {
           className="svc-anim font-inter font-semibold text-txt-dark mb-16 md:mb-24"
           style={{ fontSize: 'clamp(40px, 5vw, 72px)', lineHeight: 1.05, letterSpacing: '-0.03em' }}
         >
-          Services that scale with you
+          IT Consulting, Software & Staffing Services
         </h2>
 
         <div className="flex flex-col gap-12 md:gap-16">

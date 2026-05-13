@@ -31,18 +31,18 @@ export function HeroSection() {
           className="hero-anim font-inter font-semibold"
           style={{
             color: '#F7F3EE',
-            fontSize: 'clamp(56px, 8vw, 120px)',
-            lineHeight: 1.0,
-            letterSpacing: '-0.04em',
+            fontSize: 'clamp(48px, 6vw, 96px)',
+            lineHeight: 1.05,
+            letterSpacing: '-0.03em',
           }}
         >
-          Technology Partners for Ambitious Companies
+          MINDRICH: Leading IT Consulting & Software Company in Toronto
         </h1>
         <p
           className="hero-anim font-inter text-[20px] mx-auto mt-8"
-          style={{ color: '#8A8884', lineHeight: 1.6, letterSpacing: '-0.01em', maxWidth: 520 }}
+          style={{ color: '#8A8884', lineHeight: 1.6, letterSpacing: '-0.01em', maxWidth: 600 }}
         >
-          IT consulting, custom software, and talent placement — all from Toronto.
+          MINDRICH Canada provides expert IT consulting, custom software development, and premier tech staffing solutions.
         </p>
         <a
           href="#contact"
