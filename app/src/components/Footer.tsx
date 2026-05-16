@@ -42,8 +42,9 @@ export function Footer() {
             <span className="font-inter text-[12px]" style={{ color: '#8A8884' }}>
               &copy; 2025 MINDRICH CANADA INC
             </span>
-            <span className="font-inter text-[12px]" style={{ color: '#8A8884' }}>
-              Toronto, Ontario
+            <span className="font-inter text-[12px] text-right" style={{ color: '#8A8884' }}>
+              2300 Yonge St, Suite 1600<br className="md:hidden" />
+              Toronto, ON M4P 1E4, Canada
             </span>
           </div>
         </div>

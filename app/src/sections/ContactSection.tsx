@@ -70,9 +70,9 @@ export function ContactSection() {
 
         {/* Location */}
         <div className="contact-anim flex items-center justify-center gap-2">
-          <MapPin size={16} style={{ color: 'rgba(255,255,255,0.6)' }} />
+          <MapPin size={16} style={{ color: 'rgba(255,255,255,0.6)' }} className="shrink-0" />
           <span className="font-inter text-[16px]" style={{ color: 'rgba(255,255,255,0.6)' }}>
-            Toronto, Ontario, Canada
+            2300 Yonge St, Suite 1600, Toronto, ON M4P 1E4
           </span>
         </div>
       </div>
