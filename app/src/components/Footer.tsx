@@ -21,7 +21,7 @@ export function Footer() {
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
             className="transition-opacity duration-200 hover:opacity-80"
           >
-            <img src="/logo.png" alt="MINDRICH CANADA INC" className="h-[48px] w-auto" />
+            <img src="/logo.png" alt="Mindrich Canada Inc" className="h-[48px] w-auto" />
           </a>
           <div className="flex flex-wrap items-center gap-6">
             {links.map((l) => (
@@ -40,7 +40,7 @@ export function Footer() {
         <div className="pt-5" style={{ borderTop: '1px solid rgba(247,243,238,0.1)' }}>
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
             <span className="font-inter text-[12px]" style={{ color: '#8A8884' }}>
-              &copy; 2025 MINDRICH CANADA INC
+              &copy; 2025 Mindrich Canada Inc
             </span>
             <span className="font-inter text-[12px] text-right" style={{ color: '#8A8884' }}>
               2300 Yonge St, Suite 1600<br className="md:hidden" />

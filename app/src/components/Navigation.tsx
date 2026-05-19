@@ -50,7 +50,7 @@ export function Navigation() {
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }}
             className="flex items-center transition-opacity duration-200 hover:opacity-80"
           >
-            <img src="/logo.png" alt="MINDRICH CANADA INC" className="h-[48px] w-auto" />
+            <img src="/logo.png" alt="Mindrich Canada Inc" className="h-[48px] w-auto" />
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -100,7 +100,7 @@ export function Navigation() {
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-ink flex flex-col items-center justify-center">
           <div className="absolute top-4 left-[clamp(24px,5vw,80px)]">
-            <img src="/logo.png" alt="MINDRICH CANADA INC" className="h-[52px] w-auto" />
+            <img src="/logo.png" alt="Mindrich Canada Inc" className="h-[52px] w-auto" />
           </div>
           <button className="absolute top-4 right-[clamp(24px,5vw,80px)]" onClick={() => setMenuOpen(false)}>
             <X size={24} color="#F7F3EE" />

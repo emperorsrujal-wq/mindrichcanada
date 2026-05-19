@@ -36,19 +36,19 @@ export function AboutSection() {
               className="about-anim font-inter font-semibold mb-6"
               style={{ color: '#F7F3EE', fontSize: 'clamp(28px, 3vw, 40px)', lineHeight: 1.15, letterSpacing: '-0.02em' }}
             >
-              MINDRICH: A Leading IT Consulting Company in Toronto, Canada
+              Mindrich Canada Inc: A Leading IT Consulting Company in Toronto
             </h2>
             <p
               className="about-anim font-inter text-[20px]"
               style={{ color: '#8A8884', lineHeight: 1.6, letterSpacing: '-0.01em' }}
             >
-              MINDRICH is a premier software company and staffing firm. We're a team of engineers, strategists, and designers who believe technology should serve people. Based in Toronto, we partner with businesses across Canada to deliver top-tier custom software and connect them with exceptional tech talent.
+              Mindrich Canada Inc is a premier software company and staffing firm. We're a team of engineers, strategists, and designers who believe technology should serve people. Based in Toronto, Mindrich partners with businesses across Canada to deliver top-tier custom software and connect them with exceptional tech talent.
             </p>
           </div>
           <div className="about-anim">
             <img
               src="/about-office.jpg"
-              alt="MINDRICH - IT Consulting and Software Company in Toronto, Canada"
+              alt="Mindrich Canada Inc - IT Consulting and Software Company in Toronto, Canada"
               className="w-full h-full object-cover rounded-m"
               style={{ maxHeight: 500 }}
             />

@@ -23,7 +23,7 @@ export function HeroSection() {
       >
         <img
           src="/logo.png"
-          alt="MINDRICH CANADA INC"
+          alt="Mindrich Canada Inc"
           className="hero-anim mx-auto mb-8"
           style={{ height: 'clamp(90px, 14vw, 150px)', width: 'auto', filter: 'brightness(1.1)' }}
         />
@@ -36,13 +36,13 @@ export function HeroSection() {
             letterSpacing: '-0.03em',
           }}
         >
-          MINDRICH: Leading IT Consulting & Software Company in Toronto
+          Mindrich Canada Inc: Leading IT Consulting & Software Company
         </h1>
         <p
           className="hero-anim font-inter text-[20px] mx-auto mt-8"
           style={{ color: '#8A8884', lineHeight: 1.6, letterSpacing: '-0.01em', maxWidth: 600 }}
         >
-          MINDRICH Canada provides expert IT consulting, custom software development, and premier tech staffing solutions.
+          Mindrich Canada Inc provides expert IT consulting, custom software development, and premier tech staffing solutions in Toronto and across Canada.
         </p>
         <a
           href="#contact"
