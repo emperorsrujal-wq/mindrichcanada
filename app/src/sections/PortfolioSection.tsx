@@ -29,9 +29,9 @@ const liveProjects = [
     type: 'website',
   },
   {
-    name: 'iloveplants',
+    name: 'iloveplants.org',
     desc: 'Plant care mobile app for iOS & Android',
-    url: '#',
+    url: 'https://iloveplants.org',
     image: '/work-4.jpg',
     type: 'mobile',
   },
@@ -69,55 +69,60 @@ export function PortfolioSection() {
 
         {/* Live projects - large cinematic cards */}
         <div className="flex flex-col gap-10 md:gap-14">
-          {liveProjects.map((p) => (
-            <div key={p.name} className="work-anim group relative overflow-hidden rounded-l" style={{ aspectRatio: '16/9' }}>
-              <img
-                src={p.image}
-                alt={p.name}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
-              />
-              <div className="absolute inset-0 bg-[rgba(12,12,14,0.45)] group-hover:bg-[rgba(12,12,14,0.35)] transition-colors duration-500" />
-              <div className="absolute inset-0 p-6 md:p-10 flex items-end justify-between">
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <h3
-                      className="font-inter font-medium"
-                      style={{ color: '#F7F3EE', fontSize: 'clamp(20px, 3vw, 32px)', letterSpacing: '-0.015em' }}
-                    >
-                      {p.name}
-                    </h3>
-                    {p.type === 'mobile' && (
-                      <span className="flex items-center gap-1 px-2.5 py-1 rounded-pill" style={{ backgroundColor: 'rgba(247,243,238,0.15)', backdropFilter: 'blur(8px)' }}>
-                        <Smartphone size={12} color="#F7F3EE" />
-                        <span className="font-inter text-[11px] font-medium" style={{ color: '#F7F3EE' }}>App</span>
-                      </span>
-                    )}
+          {liveProjects.map((p) => {
+            const isClickable = p.url !== '#'
+            const Wrapper = isClickable ? 'a' : 'div'
+            const wrapperProps = isClickable ? { href: p.url, target: '_blank', rel: 'noopener noreferrer' } : {}
+
+            return (
+              <Wrapper
+                {...wrapperProps}
+                key={p.name}
+                className="work-anim group relative overflow-hidden rounded-l block cursor-pointer"
+                style={{ aspectRatio: '16/9' }}
+              >
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  style={{ transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' }}
+                />
+                <div className="absolute inset-0 bg-[rgba(12,12,14,0.45)] group-hover:bg-[rgba(12,12,14,0.35)] transition-colors duration-500" />
+                <div className="absolute inset-0 p-6 md:p-10 flex items-end justify-between">
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3
+                        className="font-inter font-medium"
+                        style={{ color: '#F7F3EE', fontSize: 'clamp(20px, 3vw, 32px)', letterSpacing: '-0.015em' }}
+                      >
+                        {p.name}
+                      </h3>
+                      {p.type === 'mobile' && (
+                        <span className="flex items-center gap-1 px-2.5 py-1 rounded-pill" style={{ backgroundColor: 'rgba(247,243,238,0.15)', backdropFilter: 'blur(8px)' }}>
+                          <Smartphone size={12} color="#F7F3EE" />
+                          <span className="font-inter text-[11px] font-medium" style={{ color: '#F7F3EE' }}>App</span>
+                        </span>
+                      )}
+                    </div>
+                    <p className="font-inter text-[14px] md:text-[16px]" style={{ color: '#8A8884' }}>
+                      {p.desc}
+                    </p>
                   </div>
-                  <p className="font-inter text-[14px] md:text-[16px]" style={{ color: '#8A8884' }}>
-                    {p.desc}
-                  </p>
+                  {isClickable ? (
+                    <span
+                      className="hidden md:inline-flex items-center gap-2 font-inter text-[14px] font-medium transition-colors duration-200 shrink-0 text-[#D4663C] group-hover:text-[#B8552F]"
+                    >
+                      Visit <ArrowUpRight size={16} />
+                    </span>
+                  ) : (
+                    <span className="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-pill font-inter text-[12px] font-medium shrink-0" style={{ backgroundColor: '#424245', color: '#8A8884' }}>
+                      Coming Soon
+                    </span>
+                  )}
                 </div>
-                {p.url !== '#' ? (
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden md:inline-flex items-center gap-2 font-inter text-[14px] font-medium transition-colors duration-200 shrink-0"
-                    style={{ color: '#D4663C' }}
-                    onMouseEnter={(e) => { e.currentTarget.style.color = '#B8552F' }}
-                    onMouseLeave={(e) => { e.currentTarget.style.color = '#D4663C' }}
-                  >
-                    Visit <ArrowUpRight size={16} />
-                  </a>
-                ) : (
-                  <span className="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-pill font-inter text-[12px] font-medium shrink-0" style={{ backgroundColor: '#424245', color: '#8A8884' }}>
-                    Coming Soon
-                  </span>
-                )}
-              </div>
-            </div>
-          ))}
+              </Wrapper>
+            )
+          })}
         </div>
 
         {/* Coming soon projects */}
