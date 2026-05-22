@@ -71,16 +71,9 @@ export function PortfolioSection() {
         <div className="flex flex-col gap-10 md:gap-14">
           {liveProjects.map((p) => {
             const isClickable = p.url !== '#'
-            const Wrapper = isClickable ? 'a' : 'div'
-            const wrapperProps = isClickable ? { href: p.url, target: '_blank', rel: 'noopener noreferrer' } : {}
 
-            return (
-              <Wrapper
-                {...wrapperProps}
-                key={p.name}
-                className="work-anim group relative overflow-hidden rounded-l block cursor-pointer"
-                style={{ aspectRatio: '16/9' }}
-              >
+            const content = (
+              <>
                 <img
                   src={p.image}
                   alt={p.name}
@@ -92,7 +85,7 @@ export function PortfolioSection() {
                   <div>
                     <div className="flex items-center gap-3 mb-2">
                       <h3
-                        className="font-inter font-medium"
+                        className="font-inter font-medium group-hover:underline"
                         style={{ color: '#F7F3EE', fontSize: 'clamp(20px, 3vw, 32px)', letterSpacing: '-0.015em' }}
                       >
                         {p.name}
@@ -110,17 +103,42 @@ export function PortfolioSection() {
                   </div>
                   {isClickable ? (
                     <span
-                      className="hidden md:inline-flex items-center gap-2 font-inter text-[14px] font-medium transition-colors duration-200 shrink-0 text-[#D4663C] group-hover:text-[#B8552F]"
+                      className="inline-flex items-center gap-2 font-inter text-[14px] font-medium transition-colors duration-200 shrink-0 text-[#D4663C] group-hover:text-[#B8552F]"
                     >
                       Visit <ArrowUpRight size={16} />
                     </span>
                   ) : (
-                    <span className="hidden md:inline-flex items-center gap-1 px-3 py-1.5 rounded-pill font-inter text-[12px] font-medium shrink-0" style={{ backgroundColor: '#424245', color: '#8A8884' }}>
+                    <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-pill font-inter text-[12px] font-medium shrink-0" style={{ backgroundColor: '#424245', color: '#8A8884' }}>
                       Coming Soon
                     </span>
                   )}
                 </div>
-              </Wrapper>
+              </>
+            )
+
+            if (isClickable) {
+              return (
+                <a
+                  key={p.name}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="work-anim group relative overflow-hidden rounded-l block cursor-pointer"
+                  style={{ aspectRatio: '16/9' }}
+                >
+                  {content}
+                </a>
+              )
+            }
+
+            return (
+              <div
+                key={p.name}
+                className="work-anim group relative overflow-hidden rounded-l block"
+                style={{ aspectRatio: '16/9' }}
+              >
+                {content}
+              </div>
             )
           })}
         </div>

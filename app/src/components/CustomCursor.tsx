@@ -53,6 +53,7 @@ export function CustomCursor() {
         backgroundColor: '#D4663C',
         mixBlendMode: 'difference',
         transition: 'opacity 0.3s',
+        pointerEvents: 'none',
       }}
     />
   )
